@@ -1,0 +1,41 @@
+<div class="flex-container">
+    <div class="quote">
+
+       <pre> <h1> Don't think 
+        just blog it!</h1> </pre>
+
+    </div>
+    <div class="signform">
+    <h2> Sign up form </h2>
+    <form [formGroup] = 'myForm' (ngSubmit) = 'onSubmit(myForm)'> 
+
+        <div class="form-group">    
+            
+            <input type="text" class="form-control" name="firstName" placeholder = 'First Name' [formControl] = 'myForm.controls["firstName"]'>
+        </div>
+        <div class="alert alert-danger" *ngIf = "!myForm.controls['firstName'].valid && myForm.controls['firstName'].touched"> First name is required  </div>
+        <div class="form-group">    
+            
+            <input type="text" class="form-control" name="lastName" placeholder = 'Last Name' [formControl] = 'myForm.controls["lastName"]'>
+        </div>
+        <div class="alert alert-danger" *ngIf = "!myForm.controls['lastName'].valid && myForm.controls['lastName'].touched"> last name is required  </div>
+        <div class="form-group">    
+            
+            <input type="text" class="form-control" name="email" placeholder = 'Email' [formControl] = 'myForm.controls["email"]'>
+        </div>
+        <div class="alert alert-danger" *ngIf = "!myForm.controls['email'].valid && myForm.controls['email'].touched"> email name is required  </div>
+        <div class="form-group">    
+            
+            <input type="password" class="form-control" name="password" placeholder = 'Password' [formControl] = 'myForm.controls["password"]'>
+        </div>
+        <div class="alert alert-danger" *ngIf = "!myForm.controls['password'].valid && myForm.controls['password'].touched"> password should be 8 characters long  </div>
+        <div class="form-group">    
+            <input type="password" class="form-control" name="conpassword" placeholder = 'Confirm Password' [formControl] = 'myForm.controls["conpassword"]'>
+        </div>
+        <div class="alert alert-danger" *ngIf = "!myForm.controls['conpassword'].valid && myForm.controls['conpassword'].touched"> password should match </div>
+        
+        <button type="submit" class="btn btn-warning form-control" [disabled] = "!myForm.valid" > Submit </button>
+
+    </form>
+    </div>
+</div>

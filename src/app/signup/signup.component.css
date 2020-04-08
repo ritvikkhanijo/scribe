@@ -1,0 +1,24 @@
+.flex-container{
+    display: flex;
+    flex-flow: row;
+    
+    background-color: #2e7cf6;
+}
+
+
+.signform{
+width: 30%;
+margin: 20px 150px 20px 300px;
+}
+
+.quote{
+    width: 50%;
+    margin-left: 20px;
+}
+h2{
+    text-align: center;
+}
+
+h1{
+    color: white;
+}

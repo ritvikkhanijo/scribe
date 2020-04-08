@@ -1,0 +1,9 @@
+.loginbtn{
+margin-left: 10px;
+border-radius: 30px;
+}
+
+.loginbtn:hover{
+    color: black;
+    
+}
